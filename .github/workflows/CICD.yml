@@ -1,0 +1,34 @@
+# This is a Demo CICD pipeline workflow with 4 jobs [code , build , test , deploy ]
+name : CICD
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Code Clone
+        run: echo "Clonning the code"
+        
+  build:
+    needs: [code]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Buildind Image
+        run: echo "Building the image"
+  
+  test:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing Changes
+        run: echo "Testing the app"
+        
+  deploy:
+    needs: [test,build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying
+        run: echo "Deploying the changes"
+  
