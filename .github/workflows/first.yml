@@ -1,0 +1,28 @@
+
+# workflow
+  # It should have a name
+  name: First
+# On tell when to trigger the workflow
+  on:
+    workflow_dispatch:
+      
+# Jobs
+  # It should be inside the workflow
+  # Jobs tells what does the work flow is for, there can be more than one job 
+  # It is a obejct so iut need indentation
+  jobs:
+  #Below is the name of the first job
+    say_hello:
+    # its determine on which os to be ecexuted on ( GitHub provides the Ephermal container)
+      runs-on: ubuntu-latest
+      steps:
+      # name of the step
+        - name: Say hello from first workflow
+        # run is use to execute the command
+          run: echo "Hello from fisrt workflow"
+      
+# steps 
+  # It should we inside the Jobs
+
+# Actions
+  # It should be inside the steps 
