@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         
     # installing linter into runner  
-      - name: Isntall linter on runner
+      - name: Install linter on runner
         run: pip intall ruff
 
     # Check files for linting
