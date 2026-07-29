@@ -21,7 +21,7 @@ jobs:
         
     # installing linter into runner  
       - name: Install linter on runner
-        run: pip intall ruff
+        run: pip install ruff
 
     # Check files for linting
       - name: Run Linter
