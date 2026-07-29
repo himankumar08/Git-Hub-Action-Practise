@@ -7,8 +7,8 @@ def intro():
   return "Execution completed !!"
 
 def meta_data(name = "Himanshu"):
-  len = len(name)
-  print(f"The name has {len} letters !! ")
+  length = len(name)
+  print(f"The name has {length} letters !! ")
   return "Got Name length !!"
   
 print(intro())
