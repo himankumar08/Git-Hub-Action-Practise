@@ -6,5 +6,11 @@ def intro():
   print(f"Hii {name} here !!!, I am {age} year old." + usecase)
   return "Execution completed !!"
 
+def meta_data(name = "Himanshu"):
+  len = len(name)
+  print(f"The name has {len} letters !! ")
+  return "Got Name length !!"
+  
 print(intro())
+print(meta_data())
   
