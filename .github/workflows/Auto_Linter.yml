@@ -1,0 +1,28 @@
+# This is to check the python code using ruff linter
+
+name : Auto-linter
+
+# Trigger on push in .py files
+on :
+  push:
+    paths: "*.py"
+
+# Defining jobs
+jobs:
+  code:
+
+  # Git hub ephermal runner 
+    runs-on: ubuntu-latest
+    steps:
+
+    # cloning code into runner
+      - name : clone code
+        uses: actions/checkout@v4
+        
+    # installing linter into runner  
+      - name: Isntall linter on runner
+        run: pip intall ruff
+
+    # Check files for linting
+      - name: Run Linter
+        run: ruff check .
